@@ -31,8 +31,8 @@ https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pa
 AR Associations 
 http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/has_many
 http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/belongs_to
-  
- *************MODEL********************** 
+  ```ruby
+ <!--*************MODEL********************** -->
   class Physician < ActiveRecord::Base
   has_many :appointments
   has_many :patients, through: :appointments
@@ -48,7 +48,7 @@ class Patient < ActiveRecord::Base
   has_many :physicians, through: :appointments
 end
 
-****************MIGRATION*******************
+<!--****************MIGRATION*******************-->
 class CreateAppointments < ActiveRecord::Migration
   def change
     create_table :physicians do |t|
@@ -85,7 +85,7 @@ class CreateRooms < ActiveRecord::Migration
 end
 
 
-``Javascript
+```javascript
 
 var garden = {
   name: "Kula Botanical Garden",
@@ -114,4 +114,4 @@ Flower.prototype.identify = function(){
     var identify = "I am an " + this.name + " and I am " + this.color + "."
     return identify
   };
-``javascript
+```
