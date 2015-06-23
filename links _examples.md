@@ -9,8 +9,8 @@ AJAX example
 
 https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/blob/pair-mccallumjack%2Cthunderenlight/public/js/application.js
 https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pair-alycit
-
- ********************Ajax******************
+```javascript
+ <!--********************Ajax******************-->
  $(document).ready(function() {
   var $comment_list = $('ul.comment_list');
 
@@ -26,7 +26,7 @@ https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pa
       $target.closest('li').html(response);
     })
   })
-
+```
 
 AR Associations 
 http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/has_many
