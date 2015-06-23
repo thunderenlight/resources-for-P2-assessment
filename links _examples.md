@@ -1,4 +1,4 @@
-H1 CRUD Step by step instructions
+# H4 CRUD Step by step instructions
 (://github.com/chi-dragonflies-2015/phase-2-guide/blob/chicago/resources/step_by_step_crud.md)
 
 CRUD Moosetalk Example
@@ -115,5 +115,5 @@ Flower.prototype.identify = function(){
   };
 ```
 
-h3 Crud and Ajax Talk 
+#h3 Crud and Ajax Talk 
 (https://talks.devbootcamp.com/crud-and-ajax)
