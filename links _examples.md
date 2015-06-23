@@ -85,7 +85,7 @@ class CreateRooms < ActiveRecord::Migration
 end
 
 
-Javascript
+``Javascript
 
 var garden = {
   name: "Kula Botanical Garden",
@@ -114,3 +114,4 @@ Flower.prototype.identify = function(){
     var identify = "I am an " + this.name + " and I am " + this.color + "."
     return identify
   };
+``javascript
