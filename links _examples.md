@@ -105,7 +105,7 @@ var garden = {
     };
     return color_collector;
   },
-ar Flower = function(name, color){
+var Flower = function(name, color){
   this.name = name;
   this.color = color;
 };
