@@ -1,13 +1,12 @@
-
-CRUD Step by step instructions
-https://github.com/chi-dragonflies-2015/phase-2-guide/blob/chicago/resources/step_by_step_crud.md
+H1 CRUD Step by step instructions
+(://github.com/chi-dragonflies-2015/phase-2-guide/blob/chicago/resources/step_by_step_crud.md)
 
 CRUD Moosetalk Example
 https://github.com/thunderenlight/moosetalk
 
 AJAX example
 
-https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/blob/pair-mccallumjack%2Cthunderenlight/public/js/application.js
+(https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/blob/pair-mccallumjack%2Cthunderenlight/public/js/application.js)
 https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pair-alycit
 ```javascript
  <!--********************Ajax******************-->
@@ -29,8 +28,8 @@ https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pa
 ```
 
 AR Associations 
-http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/has_many
-http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/belongs_to
+(http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/has_many)
+(http://apidock.com/rails/ActiveRecord/Associations/ClassMethods/belongs_to)
   ```ruby
  <!--*************MODEL********************** -->
   class Physician < ActiveRecord::Base
