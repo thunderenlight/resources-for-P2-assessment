@@ -82,7 +82,20 @@ class CreateRooms < ActiveRecord::Migration
     end
   end
 end
+<!--******************PASSWORD*********************-->
 
+ def password
+     @password ||= Password.new(password_digest)
+   end
+
+   def password=(new_password)
+     @password = Password.create(new_password)
+     self.password_digest = @password
+   end
+
+   def authenticate(password)
+     self.password == Password.new(password)
+   end
 
 ```javascript
 
