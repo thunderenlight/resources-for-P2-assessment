@@ -1,3 +1,8 @@
+BCrypt:
+https://github.com/codahale/bcrypt-ruby
+
+
+
 https://github.com/matthewrobertson/ERB-Sublime-Snippets
 https://github.com/matthewrobertson/ERB-Sublime-Snippets#snippets-and-bindings
 
