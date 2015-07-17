@@ -96,6 +96,7 @@ end
    def authenticate(password)
      self.password == Password.new(password)
    end
+   <!---->This makes it possible to use just the word password when seeding/creating!!!! Keep as password_hash in migration
 
 ```
 ```javascript
