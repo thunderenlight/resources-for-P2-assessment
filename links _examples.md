@@ -97,6 +97,7 @@ end
      self.password == Password.new(password)
    end
 
+```
 ```javascript
 
 var garden = {
