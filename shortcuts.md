@@ -1,3 +1,36 @@
+
+Bismallah
+Before ASSessment
+- [ ] Users
+
+  users model(password and authenticate)
+  users controller
+  users migrations(partiallly)
+- [ ] Security
+  
+  sessions
+  helpers
+    user
+    errors
+  header
+
+Before lunch do
+
+SCHEMA
+  SQL designer
+- [ ] map out models
+- [ ]talk out migrations
+- [ ]Console the associations and methods needed
+  
+  
+
+
+
+
+
+
+
+
 BCrypt:
 https://github.com/codahale/bcrypt-ruby
 
