@@ -28,6 +28,52 @@ https://github.com/chi-dragonflies-2015/ajaxifying-hacker-news-challenge/tree/pa
       $target.closest('li').html(response);
     })
   })
+  
+$("body").on("click", "#new-caballo", function(event){
++		event.preventDefault();
++		var url = $("#new-caballo").attr("href");
++
++		var request = $.ajax({url: url});
++		
++		request.done(function(response){
++			$("#new-caballo").hide();
++			$("#caballo-list").append(response);
++		})
++	});
++
++	$("body").on("submit", "#caballo-form", function(event){
++		event.preventDefault();
++		var data = $("#caballo-form").serialize();
++		var url = $("#caballo-form").attr("action");
++		var type = "POST";
++
++		var request = $.ajax({
++			url: url,
++			type: type,
++			data: data
++		});
++
++		request.done(function(response){
++
++			$("#caballo-form").remove();
++			$("#end").append('<h3><a href="/caballos/' + response.id + '">' + response.name + '</a></h3>');
++			$("#new-caballo").show();
++		})
++	});
++
++	$("body").on("click", "#caballo h3 a", function(event){
++		event.preventDefault();
++		var horse = $(this);
++		var url = $(this).attr("href");
++		
++		var request = $.ajax({url: url});
++
++		request.done(function(response){
++			$(horse).append(response);
++		})
++	});
+  
+  
 ```
 
 AR Associations 
