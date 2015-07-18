@@ -1,4 +1,6 @@
 ####  CRUD Step by step instructions
+Mikes crud:
+https://github.com/chi-bumblebees-2015/recipes-example-app/blob/end-of-lecture/app/controllers/recipes.rb
 
 https://github.com/chi-dragonflies-2015/phase-2-guide/blob/chicago/resources/step_by_step_crud.md
 
