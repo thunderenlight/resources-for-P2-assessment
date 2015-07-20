@@ -1,6 +1,6 @@
 
 Bismallah
-Before ASSessment
+Before 
 - [ ] Users
 
   users model(password and authenticate)
@@ -22,7 +22,7 @@ SCHEMA
 - [ ] talk out migrations
 - [ ] Console the associations and methods needed 
 - [ ] Console log update /edit models
-- 
+
   
   
 
