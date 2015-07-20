@@ -1,5 +1,7 @@
 
 Bismallah
+
+
 Before 
 - [ ] Users
 
@@ -32,7 +34,8 @@ SCHEMA
 
 
 
-
+jQuery:
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 BCrypt:
 https://github.com/codahale/bcrypt-ruby
 
