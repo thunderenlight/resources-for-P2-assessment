@@ -19,8 +19,10 @@ Before lunch do
 SCHEMA
   SQL designer
 - [ ] map out models
-- [ ]talk out migrations
-- [ ]Console the associations and methods needed
+- [ ] talk out migrations
+- [ ] Console the associations and methods needed 
+- [ ] Console log update /edit models
+- 
   
   
 
