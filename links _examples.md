@@ -1,7 +1,7 @@
 ####  CRUD Step by step instructions
 Mikes 7 step crud:
 https://github.com/chi-bumblebees-2015/recipes-example-app/blob/end-of-lecture/app/controllers/recipes.rb
-# get all
+#### get all
 #get to new individual
 #post new individual
 #show individual by id
