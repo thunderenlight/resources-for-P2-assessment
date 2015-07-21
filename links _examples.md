@@ -1,13 +1,13 @@
-####  CRUD Step by step instructions
+##  CRUD Step by step instructions
 Mikes 7 step crud:
 https://github.com/chi-bumblebees-2015/recipes-example-app/blob/end-of-lecture/app/controllers/recipes.rb
 #### get all
-#get to new individual
-#post new individual
-#show individual by id
-#get to edit form by id
-#put edit form in DB by id
-#delete indivudual by id 
+#### get to new individual
+####post new individual
+####show individual by id
+####get to edit form by id
+####put edit form in DB by id
+####delete indivudual by id 
 
 https://github.com/chi-dragonflies-2015/phase-2-guide/blob/chicago/resources/step_by_step_crud.md
 
