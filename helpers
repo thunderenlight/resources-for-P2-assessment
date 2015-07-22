@@ -1,0 +1,141 @@
+helpers do
+
+	def current_user
+		User.find(session[:user_id]) if session[:user_id]
+	end
+	def logged_in?
+		session[:user_id] != nil
+	end
+
+	def is_authorized?(clearance_id)
+		return false if !logged_in?
+		current_user.id == clearance_id
+	end
+ 
+end
+helpers do
+
+	def add_error(error_msg)
+		if session [:errors] << error_msg
+		else
+		session[:errors] << [error_msg]
+		end
+	end
+
+	def display_error
+		errors = session[:errors]
+		session[:errors] = nil
+		errors.join(", ") if errors
+	end
+
+	def parse_errors(error_msgs)
+		error_msgs.each do |attr, msg|
+			msg.each do |error|
+				add_error("#{key}: #{error}")
+			end
+			
+			
+		end
+	end
+	
+	
+	*****USERS********************
+	class CreateUsers < ActiveRecord::Migration
+  def change
+  	create_table :users do |t|
+  		t.string :first_name
+  		t.string :last_name
+  		t.string :username
+  		t.string :email
+  		t.string :password_hash
+
+  		t.timestamps
+  	end
+  end
+end
+
+	get '/login' do
+	if logged_in?
+		redirect '/'
+	else
+		erb :'users/login'
+	end
+end
+
+post '/login' do
+	@user = User.authenticate(params[:email], params[:password])
+	if @user
+		session[:user_id] = @user.id
+		redirect '/items'
+	else
+		@error = "Sorry, login failed."
+		erb :'users/login'
+	end
+end
+
+get '/signup' do
+	erb :'users/signup'
+end
+
+post '/signup' do
+	@user = User.new(params[:user])
+	if @user.save
+		session[:user_id] = @user.id
+		redirect '/items'
+	else
+		session[:errors] = @user.errors.full_messages
+		erb :'users/login'
+	end
+end
+
+
+get '/logout' do
+	session[:user_id] = nil
+	redirect '/items'
+end
+
+get '/profile/:user_id' do
+	 # can i view my shit here?
+	@seller_items = current_user.items.uniq
+	@bidded_items = current_user.bidded_items.uniq
+	erb :'users/profile'
+end
+
+delete '/profile/:id' do
+	@user = User.find(params[:id])
+	@user.destroy
+end
+
+end
+require 'bcrypt'
+class User < ActiveRecord::Base
+	has_many :items, through: :bids
+	has_many :bids
+	has_many :bidded_items, through: :bids, source: :item
+	validates :email, uniqueness: true, :format => /.+@.+\..+/
+	validates :password_hash, :length => { :minimum => 6 }
+
+	include BCrypt
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
+
+  def self.authenticate(email, password_attempt)
+    user = User.find_by(email: email)
+    return user if user && user.password == password_attempt
+  end
+
+  def name
+    self.first_name + " " + self.last_name
+  end
+
+  def bid(item,current_bid)
+    bid = item.bids.new(user: self, current_bid: current_bid)
+  end
+end
